@@ -1,8 +1,15 @@
-import numpy as np
+# Introduction to the language – Importing datasets – Data visualization.
 
-A = np.array([[4, 2], [1, 3]])
-B = np.array([[2, 0], [1, 3]])
+from sklearn.datasets import load_iris
+import pandas as pd
 
-Add = A + B
+#load the iris dataset
+iris = load_iris()
 
-print("Matrix Addition:\n", Add)
+# Create a DAtaFrame from the iris dataset.
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+df['target'] = iris.target
+
+# Display the first 5 rows of the DataFrame.
+print("Iris Dataset:")
+print(df.head())
