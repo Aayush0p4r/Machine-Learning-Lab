@@ -1,3 +1,5 @@
+# This code computes the eigenvalues and eigenvectors of the transpose of a given matrix A.
+
 import numpy as np
 
 A = np.array([[4, 2], [1, 3]])
