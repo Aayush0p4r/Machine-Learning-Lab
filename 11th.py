@@ -1,5 +1,3 @@
-#
-
 # Naive Bayes Classifier Implementation
 # Step 1: Import the necessary modules
 import pandas as pd
