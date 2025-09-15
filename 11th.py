@@ -23,29 +23,29 @@ for column in data.columns:
 print("Encoding Complpete.")
 print(data.head())
 
-# Step 3: Split into features and target
+# Step 4: Split into features and target
 print("\nStep 3: Splitting into features (X) and targrt (y)...")
 X = data.drop("Play Tennis", axis=1)
 y = data["Play Tennis"]
 print("Features and target prepared.")
 
-# Step 4: Train-Test Split
+# Step 5: Train-Test Split
 print("\nStep 4: Splitting the dataset into training and testing sets...")
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
 print("Train-test split complete.")
 
-# Step 5: Train Naive Bayes Model
+# Step 6: Train Naive Bayes Model
 print("\nStep 5: Training the Naive Bayes model...")
 model = GaussianNB()
 model.fit(X_train, y_train)
 print("Model training complete.")
 
-# Step 6: Make Predictions
+# Step 7: Make Predictions
 print("\nStep 6: Making predictions on the test set...")
 y_pred = model.predict(X_test)
 print("Predictions complete.")
 
-# Step 7: Evaluate the Model
+# Step 8: Evaluate the Model
 print("\nStep 7: Evaluating the model...")
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("\nConfusion Matrix:\n", confusion_matrix(y_test, y_pred))

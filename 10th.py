@@ -73,7 +73,7 @@ def ID3(data, originaldata, features, target_attribute="PlayTennis", parent_node
         best_feature = features[np.argmax(gains)]
 
         # Create a new node for the tree
-        tree = Node(name=best_feature)
+        tree = {best_feature: {}}
 
         # Split the dataset on the best feature
         for value in np.unique(data[best_feature]):
